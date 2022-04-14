@@ -1,9 +1,10 @@
 require "rails"
+require "approval/mixins"
 
 module Approval
   class Engine < ::Rails::Engine
     initializer "approval.mixins" do
-      ActiveSupport.on_load :active_record_base do
+      ActiveSupport.on_load :active_record do
         extend ::Approval::Mixins
       end
     end
