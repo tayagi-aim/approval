@@ -1,4 +1,5 @@
 require "rails"
+require "approval/mixins"
 
 module Approval
   class Engine < ::Rails::Engine
